@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "65683fe3-486b-490d-aba8-b1e0706a798f",
+		"name": "Desafio Totvs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - Lista todos os usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/usuarios",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"usuarios"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET - Usuário por ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://msborges.local/desafiototvs/api/usuarios/id=1",
+							"protocol": "http",
+							"host": [
+								"msborges",
+								"local"
+							],
+							"path": [
+								"desafiototvs",
+								"api",
+								"usuarios",
+								"id=1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 09 Dec 2018 14:26:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.34 (Unix) LibreSSL/2.5.5 PHP/7.1.19"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.19"
+						},
+						{
+							"key": "Content-Length",
+							"value": "545"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"0\": {\n        \"id\": \"1\",\n        \"nome\": \"Maicon Borges\",\n        \"email\": \"ms.borges@outlook.com\",\n        \"cpf\": \"06687446932\",\n        \"usuario\": \"msborges\",\n        \"senha\": \"123456\",\n        \"usradmin\": \"1\",\n        \"usrativo\": \"1\"\n    },\n    \"1\": {\n        \"id\": \"2\",\n        \"nome\": \"Maicon Borges\",\n        \"email\": \"maiconsistema@gmail.com\",\n        \"cpf\": \"06687446933\",\n        \"usuario\": \"ms.borges\",\n        \"senha\": \"123456\",\n        \"usradmin\": \"0\",\n        \"usrativo\": \"1\"\n    },\n    \"2\": {\n        \"id\": \"3\",\n        \"nome\": \"Maicon Borges\",\n        \"email\": \"ms.borges@icloud.com\",\n        \"cpf\": \"06687446934\",\n        \"usuario\": \"ms.borgess\",\n        \"senha\": \"123456\",\n        \"usradmin\": \"0\",\n        \"usrativo\": \"0\"\n    },\n    \"status\": 1,\n    \"contador\": 3,\n    \"message\": \"Dados retornados com sucesso.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET - Lista usuário por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/usuario/1",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Novo usuário",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Vanessa Machado de Santana Borges\",\r\n  \"email\": \"vms.bio@gmail.com\",\r\n  \"cpf\": \"09024607906\",\r\n  \"usuario\": \"vms.bio\",\r\n  \"senha\": \"123456\"\r\n}"
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/usuarios/novo",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"usuarios",
+						"novo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Alterar usuário por ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Vanessa Borges\",\r\n  \"senha\": \"12345678910\"\r\n}"
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/usuarios/22",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"usuarios",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Desativar usuário por ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/usuarios/remover/22",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"usuarios",
+						"remover",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Lista todos os leilões",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/leiloes",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"leiloes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Lista leilão por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/leilao/1",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"leilao",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Novo leilão",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tbl_usuario_id\": 2,\r\n  \"tbl_situacao_id\": 1,\r\n  \"descricao\": \"Casa Top\",\r\n  \"valorinicial\": \"120890.00\",\r\n  \"dtabertura\": \"2018-12-20 00:00:00\",\r\n  \"dtfinalizacao\": \"2019-01-01 00:00:00\",\r\n  \"leilativo\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/leiloes/novo",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"leiloes",
+						"novo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Alterar leilão por ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tbl_usuario_id\": 2,\r\n  \"descricao\": \"Casa Top D+++\"\r\n}"
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/leiloes/4",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"leiloes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Desativar leilão por ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/leiloes/remover/4",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"leiloes",
+						"remover",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Lista Lances por Leilão",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/leilao/lances/1",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"leilao",
+						"lances",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Novo lance por leilão",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tbl_usuario_id\": 1,\r\n  \"tbl_leilao_id\": 1,\r\n  \"valorlance\": 205.12\r\n}"
+				},
+				"url": {
+					"raw": "http://msborges.local/desafiototvs/leiloes/lances/novo",
+					"protocol": "http",
+					"host": [
+						"msborges",
+						"local"
+					],
+					"path": [
+						"desafiototvs",
+						"leiloes",
+						"lances",
+						"novo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
